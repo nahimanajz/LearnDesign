@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: roboto;
+}
+h1, h2,h3, h4,h5,h6 {
+    font-family: 'Nova Round', cursive;
+}
+
+.wrap {
+    background: rgba(0, 0, 0, 0.5) url('../css/images/desk.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow:hidden;
+    background-blend-mode: overlay;
+}
+.wave {
+    position: absolute;
+    width: 100%;
+    bottom: -140px;
+    color: #fff;
+    opacity: 1;
+}
+header {
+    position: fiexed;
+    top: 0;
+    left: 0;
+    padding: 25px 80px;
+    background: linear-gradient(to top,transparent, rgba(0,0,0,0.6));
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    float: left;
+    color: #fff;
+}
+header .menu  {
+    float: right;
+    margin-top: 5px;
+}
+header ul li {
+    display: inline-block;
+    margin: 0 16px;
+}
+header ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.content  {
+    max-width: 55%;
+    padding: 130px 80px 0;
+    color: #fff;
+}
+.content h1 {
+    font-size: 48px;
+}
+.content p {
+    font-size: 20px;
+    padding: 25px 0;
+    font-weight: 300px;
+}
+.content .btn-group {
+    margin-top: 25px;
+}
+.content a {
+    display: inline-block;
+    padding: 15px 45px;
+    text-decoration: none;
+    color: white;
+    border-radius: 45px;
+}
+.content a.color1{
+    background-color: #ffc107;
+}
+.our-parteners {
+    padding: 0 80px;
+    position: relative;
+}
+.our-parteners h3 {
+    font-size: 28px;margin-bottom: 15px;
+}
+.our-parteners hr {
+    border: none;
+    height: 4px;
+    width: 100px;
+    background-color: orange;
+}
+.our-parteners-inner {
+    margin-top: 50px;
+}
+.our-parteners-inner a {
+    display: inline-block;
+    width: 14%;
+    padding: 15px;
+    margin-right: 25px ;
+    border: 1px solid #cacaca;
+    border-radius: 20px;
+    box-shadow: 0 5px 0  #cacaca;
+}
+.our-parteners-inner img {
+    width: 100%;
+}
