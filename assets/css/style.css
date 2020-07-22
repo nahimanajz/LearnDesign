@@ -108,3 +108,23 @@ header ul li a {
 .our-parteners-inner img {
     width: 100%;
 }
+
+/* scrolling effects on parallax */
+.parallax {
+    background-image: url('images/desk.jpg');
+     height: 100%;
+    
+    background-attachment: fixed;
+    /* no repeat 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+}
+.p-content {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    margin-top: 23px;
+    width:100%;
+    box-shadow: 0 8px 4px 2px rgba(0, 0, 0, 0.9);
+}
