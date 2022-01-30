@@ -1,0 +1,52 @@
+
+@import 'scss/_mixins.scss';
+@import 'scss/colors';
+  html, body{
+      padding: 0 32px;
+      margin: 0;
+  }
+  .container{
+     @include grid;
+  }
+  // header and navs section
+  .header{
+    background:$primary;
+    @include grid($cols: repeat(4, 1fr)) ;
+    grid-template-rows: 1fr;
+    color: $white;
+    min-height: 12vh;
+  }
+  // section welcome
+  .section{
+   height: 25vh;
+  }
+  .main{
+    @include grid($cols: repeat(1fr)) ;
+  }
+  // text description
+  .content{
+    min-height:40vh;
+    @include grid($cols: repeat(2, 1fr)) ;
+ 
+  }
+  //  3 images on 
+  .grid-col-1-2{@include grid;}
+  .span-col-2{grid-column: span 2 / auto;}
+
+  .flex-between{
+    @include flex;
+  }
+
+  // footer 
+  //footer top
+  .footer-header{
+    @include flex($justify:flex-start);
+    color: $white;
+    list-style-type: none;
+    background: $primary;
+    padding: 16px;
+    border-radius: 4px;
+  }
+  .footer-bottom{
+    @include flex;
+  }
