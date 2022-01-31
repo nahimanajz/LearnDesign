@@ -2,7 +2,7 @@
 @import 'scss/_mixins.scss';
 @import 'scss/colors';
   html, body{
-      padding: 0 32px;
+      padding: 0 16px;
       margin: 0;
   }
   .container{
@@ -10,33 +10,55 @@
   }
   // header and navs section
   .header{
-    background:$primary;
-    @include grid($cols: repeat(4, 1fr)) ;
+    @include grid($cols: repeat(5, 1fr)) ;
     grid-template-rows: 1fr;
-    color: $white;
     min-height: 12vh;
   }
+  ul li{list-style-type: none;}
+  ul li a {  text-decoration: none;  color: $dark;}
+  ul li span { margin: 0 16px;}
+  // .nav-item{ display:flex; justify-content: space-around;}
+  .border-left{border-left: 2px solid $grey; margin: 24px 0;}
   // section welcome
   .section{
    height: 25vh;
-  }
+   margin: 0;
+   background:url('../images/ago/mv.jpg') top center no-repeat;
+   object-fit: cover; 
+   @include flex;
+   align-items:center;
+   }
   .main{
     @include grid($cols: repeat(1fr)) ;
   }
   // text description
   .content{
-    min-height:40vh;
-    @include grid($cols: repeat(2, 1fr)) ;
- 
+    margin-top: 20px;
+   display: flex;
+   justify-content: space-between;
   }
+  
   //  3 images on 
-  .grid-col-1-2{@include grid;}
-  .span-col-2{grid-column: span 2 / auto;}
-
-  .flex-between{
-    @include flex;
-  }
-
+  .grid-col-1-2{@include grid; gap: 20px; height:auto; max-width: 690px;}
+  .span-col-2{ grid-column: span 2 / auto;}
+  img{ object-fit: cover;}
+.flex-between{
+  @include flex;
+}
+// buttons
+.curved-botton {
+  border-bottom-left-radius: 48px;
+  border-top-right-radius: 48px;
+  color: $white;
+  background: linear-gradient(to top right, rgba(103,178, 65), rgb(36,165,69));
+  border: 0;
+  padding: 16px 32px;
+  margin:64px 0 0 128px;
+  font-size: 24px;
+}
+.text-info{color:$primary; font-size: 32px;}
+.button-info{color:$white; @include padding($v:16px, $h:32px); border:0; background: $primary;@include curve;}
+.row {@include flex; padding-right: 32px;}
   // footer 
   //footer top
   .footer-header{

@@ -8,3 +8,9 @@
     justify-content: $justify;
     flex-direction:$fd;
   }
+  @mixin curve($br:8px){
+    border-radius: $br;
+}
+@mixin padding($v: 8px, $h:8px){
+    padding: $v $h;
+}
