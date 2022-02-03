@@ -15,10 +15,17 @@
     min-height: 12vh;
   }
   ul li{list-style-type: none;}
-  ul li a {  text-decoration: none;  color: $dark;}
+  ul li a {  text-decoration: none;  color: $dark; }
   ul li span { margin: 0 16px;}
-  // .nav-item{ display:flex; justify-content: space-around;}
-  .border-left{border-left: 2px solid $grey; margin: 24px 0;}
+ 
+  .line-up {@include grid($cols: repeat(4, 1fr))}
+ .line-up > .nav-item a:hover {
+   background: $gradient-blue;
+   color: $white;
+   @include curve($br:16px)
+  }
+  .line-up .nav-item a{padding: 8px;} 
+  .border-img{border-left: 2px solid $grey; margin: 24px 0;}
   // section welcome
   .section{
    height: 25vh;
@@ -34,31 +41,37 @@
   // text description
   .content{
     margin-top: 20px;
-   display: flex;
-   justify-content: space-between;
+    @include grid($cols: repeat(2,1fr)) ; 
   }
   
   //  3 images on 
-  .grid-col-1-2{@include grid; gap: 20px; height:auto; max-width: 690px;}
+  .grid-col-1-2{@include grid; gap: 20px; max-height:730px;  max-width: 690px;}
   .span-col-2{ grid-column: span 2 / auto;}
   img{ object-fit: cover;}
 .flex-between{
-  @include flex;
+ @include flex;
 }
 // buttons
 .curved-botton {
   border-bottom-left-radius: 48px;
   border-top-right-radius: 48px;
   color: $white;
-  background: linear-gradient(to top right, rgba(103,178, 65), rgb(36,165,69));
+  background: linear-gradient(to top right, rgb(103,178, 65), rgb(36,165,69));
   border: 0;
   padding: 16px 32px;
   margin:64px 0 0 128px;
   font-size: 24px;
 }
 .text-info{color:$primary; font-size: 32px;}
-.button-info{color:$white; @include padding($v:16px, $h:32px); border:0; background: $primary;@include curve;}
-.row {@include flex; padding-right: 32px;}
+.button-info{
+  max-width: 100px;
+  color:$white; 
+  @include padding($v:16px, $h:32px);
+   border:0; 
+   background: $primary;
+   @include curve;
+  }
+//.row {@include flex; padding-right: 32px;}
   // footer 
   //footer top
   .footer-header{
@@ -72,3 +85,40 @@
   .footer-bottom{
     @include flex;
   }
+
+
+@media (max-width: 800px){
+  .header{
+    @include grid($cols: 1fr) ;
+  }
+  .border-img{
+    border-left: 0;
+  border-top: 2px solid $grey;
+
+  }
+  .span-col-2{border-top: 2px solid $grey; }
+
+  .line-up{
+    @include grid($cols: repeat(2, 1fr));
+    gap: 1.5px;
+  }
+  .line-up li {
+    background:$gradient-blue;
+    padding: 8px;
+    text-align: center;
+  }
+  .line-up li a{ color: $white; }
+  
+  .line-up> .nav-item a {
+   @include curve($br: 0);
+  }
+  .flex-responsive {flex-direction: column;}
+
+  .content {
+    @include grid($cols:1fr); 
+  }
+  .border-right-left{ border-left: 2px solid $grey; border-right:2px solid $grey;}
+  .flex-between{
+    //@include flex($direction:column);
+  }
+}

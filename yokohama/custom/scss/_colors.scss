@@ -2,3 +2,6 @@ $primary:rgb(35, 81, 135);
 $white: white;
 $dark: #333;
 $grey: #ccc;
+$lightblue: #008ff6;
+$blue:rgb(48,116,234);
+$gradient-blue: linear-gradient(to left bottom, $lightblue,  $blue);

@@ -1,11 +1,11 @@
 ﻿/*――――――――――――――――――
 	リセット
 ―――――――――――――――――――*/
-@import "compass";
-@import "compass/reset";
+ @import "compass";
+ @import "compass/reset";
 
 :root{
-	// font
+	 /* font */
 	--robot: 'Roboto Condensed', sans-serif;
 }
 

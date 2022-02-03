@@ -1,10 +1,11 @@
-@mixin grid($cols: repeat(1, 1fr)){
+@mixin grid($cols: repeat(1, 1fr), $gap: 0px){
     display: grid;
     grid-template-columns: $cols;
+    $gap:$gap;
 }
-@mixin flex($justify:space-between,$fd: row){
+@mixin flex($justify:space-between,$fd: row, $wrap:wrap){
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: $wrap;
     justify-content: $justify;
     flex-direction:$fd;
   }
