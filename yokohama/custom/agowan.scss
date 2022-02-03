@@ -93,7 +93,7 @@
   }
   .border-img{
     border-left: 0;
-  border-top: 2px solid $grey;
+    border-top: 2px solid $grey;
 
   }
   .span-col-2{border-top: 2px solid $grey; }
@@ -118,7 +118,7 @@
     @include grid($cols:1fr); 
   }
   .border-right-left{ border-left: 2px solid $grey; border-right:2px solid $grey;}
-  .flex-between{
-    //@include flex($direction:column);
-  }
+  .bordered { border: 2px solid $grey;}
+  .span-col-2 ul { padding:0px;}
+
 }
