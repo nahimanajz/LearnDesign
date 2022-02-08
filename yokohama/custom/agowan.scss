@@ -26,7 +26,7 @@
   }
   .margin-left{margin-left:32px ;}
   .line-up .nav-item a{padding: 8px;} 
-  .border-img{border-left: 1px solid $grey; margin: 24px 0;}
+  .border-img{border-left: 1px solid $grey; margin: 24px 0; padding-left: 16px;}
   // section welcome
   .section{
    height: 25vh;
@@ -72,6 +72,10 @@
    background: $primary;
    @include curve;
   }
+  /**
+   spacing 
+  */
+  .header,.main, .content, .footer-header {padding: 0 64px;}
 .row {@include flex; padding-right: 31px;}
   // footer 
   //footer top
