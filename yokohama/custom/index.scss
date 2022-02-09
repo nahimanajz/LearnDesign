@@ -31,7 +31,7 @@
   .section{
    height: 25vh;
    margin: 0;
-   background:url('../images/ago/mv.jpg') top center no-repeat;
+   background:url('../images/ago/mv2.jpg') top center no-repeat;
    object-fit: cover; 
    @include flex;
    align-items:center;
@@ -45,10 +45,11 @@
     @include grid($cols: repeat(2,1fr)) ; 
   }
   .pull-right{place-self: stretch end;}
+  .pull-left{place-self: stretch start}
   //  3 images on 
   .grid-col-1-2{@include grid; gap: 20px; max-height:730px;  max-width: 690px;}
   .span-col-2{ grid-column: span 2 / auto;}
-  img{ object-fit: fill;}
+  .img{ object-fit: contain;}
 .flex-between{
  @include flex;
 }
