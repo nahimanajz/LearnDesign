@@ -31,7 +31,7 @@
   .section{
    height: 25vh;
    margin: 0;
-   background:url('../images/ago/mv2.jpg') top center no-repeat;
+   background:url('../images/mv2.jpg') top center no-repeat;
    object-fit: cover; 
    @include flex;
    align-items:center;
@@ -92,7 +92,7 @@
   }
   .flex {display:flex; list-style-type: none;}
 
-@media (max-width: 800px){
+@media (max-width: 767px){ // mobile phones
 
   .header{
     @include grid($cols: 1fr) ;
@@ -129,7 +129,7 @@
   .text-center {text-align: center;}
   .line-up li a{ color: $white; }
   
-  .line-up> .nav-item a {
+  .line-up > .nav-item a {
    @include curve($br: 0);
   }
   .flex-responsive {flex-direction: column;}
@@ -141,4 +141,24 @@
   .bordered { border: 1px solid $grey;}
   .span-col-2 ul { padding:0px;}
 
+}
+@media (max-width: 768px){ //ipad & tablet
+  div ul.line-up{
+  @include grid($cols: repeat(4, 1fr));
+  margin-bottom: 1px;
+  margin-left:0 !important ;
+  padding: 0 !important;
+  width: 100%;
+
+  }
+  .flex-responsive{
+    flex-direction: row;
+  }
+  .header{padding: 0;}
+ .span-col-2 > div ul.line-up{padding: 0 16px;}
+ .content {
+   @include grid($cols: repeat(2, 1fr));
+ }
+  .img {height: 400px; width:400px;}
+ .row > div{margin-bottom: 40px;}
 }
