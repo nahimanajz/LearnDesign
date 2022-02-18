@@ -92,73 +92,72 @@
   }
   .flex {display:flex; list-style-type: none;}
 
-@media (max-width: 767px){ // mobile phones
-
-  .header{
-    @include grid($cols: 1fr) ;
-  }
-  .flex {
-    flex-direction: column ;
-    list-style-type: disc;
+// @media (max-width: 768px){ //ipad & tablet
+//     div ul.line-up{
+//       @include grid($cols: repeat(4, 1fr));
+//       margin-bottom: 1px;
+//       margin-left:0 !important ;
+//       padding: 0 !important;
+//       width: 100%;
+//       }
+//       .flex-responsive{
+//         flex-direction: row;
+//       }
+//       .header{padding: 0;}
+//      .span-col-2 > div ul.line-up{padding: 0 16px;}
+//      .content {
+//        @include grid($cols: repeat(2, 1fr));
+//      }
+//       .img {height: 400px; width:400px;}
+//      .row > div{margin-bottom: 40px;}
+    
+// }
+@media (max-width: 600px){ // mobile phones
+    .header,.main, .content, .footer-header,.footer {padding: 0 16px !important;}
+    .header{
+      @include grid($cols: 1fr);
     }
-  .v-border{border-left: 1px solid $grey; border-right: 1px solid $grey; }
-  .v-64 {height: 64px; align-content: center;}
-  div.nav-item{ justify-self: stretch;}
-  .border-img{
-    border-left: 0;
-    border-top: 1px solid $grey;
-
-  }
-  .mobile{display: block;}
-  .desktop {visibility: hidden; background: teal;}
-
-  .span-col-2{border-top: 1px solid $grey; }
-
-  .line-up{
-    @include grid($cols: repeat(2, 1fr));
-    gap: 1.5px;
-  }
-  .line-up li {
-    background:$gradient-blue;
-    padding: 8px;
-    text-align: center;
-  }
-  .mobile {visibility: hidden;}
-  .desktop {display: block;}
-  .column{@include flex($fd:column)}
-  .text-center {text-align: center;}
-  .line-up li a{ color: $white; }
+    .flex {
+      flex-direction: column !important;
+      list-style-type: disc !important;
+      }
+    .v-border{border-left: 1px solid $grey; border-right: 1px solid $grey !important; }
+    .v-64 {height: 64px; align-content: center !important;}
+    div.nav-item{ justify-self: stretch !important;}
+    .border-img{
+      border-left: 0 !important;
+      border-top: 1px solid $grey !important;
   
-  .line-up > .nav-item a {
-   @include curve($br: 0);
+    }
+    .mobile{display: block !important;}
+    .desktop {visibility: hidden !important; background: teal !important;}
+  
+    .span-col-2{border-top: 1px solid $grey !important; }
+  
+    .line-up{
+      @include grid($cols: repeat(2, 1fr));
+      gap: 1.5px !important;
+    }
+    .line-up li {
+      background:$gradient-blue !important;
+      padding: 8px !important;
+      text-align: center !important;
+    }
+    .mobile {visibility: hidden !important;}
+    .desktop {display: block !important;}
+    .column{ flex-direction: column !important;}
+    .text-center {text-align: center !important;}
+    .line-up li a{ color: $white !important; }
+    
+    .line-up > .nav-item a {
+     @include curve($br: 0);
+    }
+    .flex-responsive {flex-direction: column !important;}
+   
+    .content {
+      @include grid($cols:1fr); 
+    }
+    .border-right-left{ border-left: 1px solid $grey; border-right:1px solid $grey !important;}
+    .bordered { border: 1px solid $grey !important;}
+    .span-col-2 ul { padding:0px !important;}
   }
-  .flex-responsive {flex-direction: column;}
- 
-  .content {
-    @include grid($cols:1fr); 
-  }
-  .border-right-left{ border-left: 1px solid $grey; border-right:1px solid $grey;}
-  .bordered { border: 1px solid $grey;}
-  .span-col-2 ul { padding:0px;}
-
-}
-@media (max-width: 768px){ //ipad & tablet
-  div ul.line-up{
-  @include grid($cols: repeat(4, 1fr));
-  margin-bottom: 1px;
-  margin-left:0 !important ;
-  padding: 0 !important;
-  width: 100%;
-
-  }
-  .flex-responsive{
-    flex-direction: row;
-  }
-  .header{padding: 0;}
- .span-col-2 > div ul.line-up{padding: 0 16px;}
- .content {
-   @include grid($cols: repeat(2, 1fr));
- }
-  .img {height: 400px; width:400px;}
- .row > div{margin-bottom: 40px;}
-}

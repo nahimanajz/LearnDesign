@@ -11,3 +11,6 @@ This reposioty holds all frontend codes I do as my hobby to imporve my frontend 
 ## Added
 it is feature of working on BWstuffs.
 path to file is `/Volumes/D/Brainworks\ Job/yokoyama/tenboudai/agowan.html`
+## next task 
+1. adding javascript to activate tablet and ipad view when screen size changes
+`hint` use `addEventListener(resize)`

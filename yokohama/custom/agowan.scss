@@ -95,6 +95,8 @@
 
   .header{
     @include grid($cols: 1fr) ;
+   padding:0 8px;
+
   }
   .flex {
     flex-direction: column ;
