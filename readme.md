@@ -6,4 +6,11 @@ This reposioty holds all frontend codes I do as my hobby to imporve my frontend 
 3. 10 CSS Layout magic style with CSS they are responsive without @media queries
  [(https://nahimanajz.github.io/LearnDesign/layoutMagics.html)]
 4. Sticky navigation bar
-[(https://nahimanajz.github.io/LearnDesign/sticky.html)]
+[ sticky](https://nahimanajz.github.io/LearnDesign/sticky.html)
+
+## Added
+it is feature of working on BWstuffs.
+path to file is `/Volumes/D/Brainworks\ Job/yokoyama/tenboudai/agowan.html`
+## next task 
+1. adding javascript to activate tablet and ipad view when screen size changes
+`hint` use `addEventListener(resize)`

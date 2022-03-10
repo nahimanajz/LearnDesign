@@ -1,0 +1,17 @@
+@mixin grid($cols: repeat(1, 1fr), $gap: 0px){
+    display: grid;
+    grid-template-columns: $cols;
+    $gap:$gap;
+}
+@mixin flex($justify:space-between,$fd: row, $wrap:wrap){
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    flex-direction:$fd;
+  }
+  @mixin curve($br:8px){
+    border-radius: $br;
+}
+@mixin padding($v: 8px, $h:8px){
+    padding: $v $h;
+}

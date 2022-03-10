@@ -1,0 +1,184 @@
+/*――――――――――――――――――
+	news
+―――――――――――――――――――*/
+.news__list{
+	line-height: 1.4;
+	li{
+		margin-bottom: 5px;
+	}
+	a{
+		font-size: 16rem;
+		color: #343434;
+		text-decoration: none;
+	}
+	.date{
+		color: #9d9d9d;
+		position: relative;
+		&:after{
+			content: '';
+			display: inline-block;
+			background: #9d9d9d;
+			width: 1px;
+			position: relative;
+			height: 15px;
+			top: 2px;
+			margin: 0 12px;
+		}
+	}
+}
+
+.archive__pager{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	a,span{
+		font-size: 17rem;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 5px;
+		margin: 0 4px;
+		display: inline-block;
+		min-width: 38px;
+		
+	}
+	span{
+		background: #dff4ff;
+		color: #358fdd;
+	}
+	a{
+		background: #29a9ee;
+		color: #fff;
+		text-decoration: none;
+	}
+	.num{
+		font-family: 'Dosis', sans-serif;
+	}
+	
+	.prev,.next{
+		padding: 0 18px;
+	}
+}
+
+.post__content__header{
+	padding-top: 5px;
+	position: relative;
+	padding-right: 160px;
+	margin-bottom: 25px;
+	.ttl02{
+		line-height: 1.4;
+		margin-bottom: 10px;
+	}
+	time{
+		font-size: 12rem;
+		color: #9d9d9d;
+		display: block;
+	}
+	.btn01{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.post__content{
+	line-height: 2.14;
+	
+	p{
+		margin-bottom: 35px;
+	}
+	.pt{
+		padding-top: 40px;
+	}
+	.flex{
+		margin-bottom: 40px;
+		display: flex;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		justify-content: space-between;
+		&.reverse{
+			flex-direction: row-reverse;
+		}
+		>div{
+			width: 48.93%;
+			p{
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		.flex{
+			>div{
+				width: 47.83%;
+			}
+		}
+	}
+	
+	img{
+		+.flex{
+			margin-top: 20px;
+		}
+	}
+	
+}
+@media only screen and (max-width : 1410px){
+	
+}
+
+@media only screen and (max-width : 1023px){
+	
+}
+
+@media only screen and (max-width : 767px){
+	.news__list{
+		li{
+			margin-bottom: 14px;
+			border-bottom: solid 1px #ccc;
+			padding-bottom: 12px;
+		}
+		.date{
+			display: block;
+			&:after{
+				content: none;
+			}
+		}
+	}
+	
+	.archive__pager{
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		>a,>span{
+			margin: 0 5px 5px 0;
+		}
+	}
+	
+	.post__content__header{
+		padding-right: 0;
+		time{
+			margin-bottom: 10px;
+			font-size: 14rem;
+		}
+		.btn01{
+			position: static;
+		}
+	}
+	.post__content{
+		p{
+			margin-bottom: 20px;
+		}
+		.pt{
+			padding-top: 0;
+		}
+		>.flex{
+			display: block;
+			>div{
+				width: 100%;
+				&:first-child{
+					margin-bottom: 20px;
+				}
+			}
+			
+		}
+	}
+}
