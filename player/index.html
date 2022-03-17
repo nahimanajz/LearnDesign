@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/videobg.css">
+    <!-- <link rel="stylesheet" href="./assets/css/10CssLayoutMagic.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+          font-family: Arial;
+          font-size: 17px;
+        }
+        
+        #myVideo {
+          bottom: 0;
+          left: 0;
+          right: 0;
+         height: 100vh;
+          width:100%;
+        }
+        
+        .content {
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.7);
+          color: #f1f1f1;
+          width: 100%;
+          padding: 20px;
+          height: 100%;
+        }
+        .grid {
+            display: grid;
+            place-items: center;
+        }
+        .end {place-self: end; padding: 63px;}
+        .start {place-self: start; padding: 0 63px;}
+        
+        #myBtn {
+          width: 200px;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          background: #000;
+          color: #fff;
+          cursor: pointer;
+          border-radius: 128px;
+        }
+        
+        #myBtn:hover {
+          background: #ddd;
+          color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="./assets/video/smilling_girl.mov" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>                  
+          <div class="content grid">
+              <div class="start">
+                 MP3
+              </div>
+              <div class="">
+                    <h1>BWA Player</h1>
+                    <p> Enjoy Music.</p>
+                    <a id="myBtn" href="audios.html" style="text-decoration: none;">Go to List </a>
+              </div>
+           </div>
+            
+    </div>
+</body>
+</html>
+<script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");
+    window.addEventListener("load", video.play())
+    
+    function myFunction() {
+      if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+      } else {
+        video.pause();
+        btn.innerHTML = "Play";
+      }
+    }
+ </script>

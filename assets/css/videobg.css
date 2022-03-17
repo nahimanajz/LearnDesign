@@ -1,0 +1,11 @@
+.info {background: #b6ebb6;}
+.yellow {background: #fcc25a;}
+.purple {background: #d0b2e6;}
+
+.ex7 .parent {
+    display: grid;
+    grid-template-columns:minmax(100px, 25%) 1fr;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
