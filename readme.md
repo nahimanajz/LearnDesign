@@ -6,7 +6,8 @@ This reposioty holds all frontend codes I do as my hobby to imporve my frontend 
 3. 10 CSS Layout magic style with CSS they are responsive without @media [queries]
  (https://nahimanajz.github.io/LearnDesign/layoutMagics.html)
 4. Sticky navigation bar
-[ sticky](https://nahimanajz.github.io/LearnDesign/sticky.html)
+[sticky](https://nahimanajz.github.io/LearnDesign/sticky.html)
+[animations](https://animista.net/play/basic/flip-scale/flip-scale-down-hor)
 
 ## Added
 it is feature of working on BWstuffs.
